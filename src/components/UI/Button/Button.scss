@@ -1,0 +1,31 @@
+@import 'src/scss/vars';
+@import 'src/scss/mixins';
+
+.btn {
+    @include text ($ff, 500, 16px, 20px, $white);
+    padding: 12px 0;
+    display: inline-flex;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+    background: $primary;
+    border-radius: $border;
+    width: 100%;
+    border: 0;
+    outline: 0;
+    margin-top: 32px;
+    cursor: pointer;
+    &._secondary {
+        @include text ($ff, 500, 16px, 20px, $secondary);
+        background: transparent;
+        margin-top: 16px;
+        padding: 10px 0;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        border: 1px solid $input;
+        border-right: $border;
+        text-decoration: none;
+    }
+}

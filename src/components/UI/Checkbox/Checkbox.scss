@@ -1,0 +1,47 @@
+@import 'src/scss/vars';
+@import 'src/scss/mixins';
+
+.checkbox {
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    cursor: pointer;
+
+    &__input {
+        display: none;
+        &:checked ~ .checkbox__checkmark {
+            background: $primary;
+            border-color: $primary;
+            svg {
+                transform: scale(1);
+            }
+        }
+    }
+    &__checkmark {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 1px solid $input;
+        border-radius: $border-small;
+        width: 16px;
+        height: 16px;
+        transition: $transition;
+        svg {
+            width: 12px;
+            height: 12px;
+            display: inline-block;
+            fill: $white;
+            transition: $transition;
+            transform: scale(0);
+        }
+    }
+
+    &_title {
+        @include text ($ff, 500, 14px, 20px, $secondary);
+        flex: none;
+        order: 1;
+        flex-grow: 0;
+    }
+
+    
+}

@@ -1,1 +1,42 @@
 @import 'src/scss/_vars';
+@import 'src/scss/mixins';
+
+.login {
+    max-width: 360px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin-inline: auto;
+    &__title {
+        @include text ($ff, 700, 40px, 48px, $secondary);
+        letter-spacing: 0.01em;
+        text-transform: capitalize;
+        margin-bottom: 8px;
+    }
+
+    &__desc {
+        @include text ($ff, 400, 16px, 24px, $accent);
+        margin-bottom: 56px;
+    }
+
+    &__sign-up {
+        @include text ($ff, 400, 14px, 24px, $secondary);
+        text-align: center;
+        margin-top: 20px;
+        a {
+            text-decoration: none;
+            color: $primary;
+        }
+    }
+}
+.form {
+    &__row {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+    a {
+        @include text ($ff, 500, 14px, 20px, $primary);
+        text-decoration: none;
+    }
+}
