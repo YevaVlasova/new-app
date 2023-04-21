@@ -5,6 +5,11 @@
     display: flex;
     gap: 12px;
     align-items: center;
+    cursor: pointer;
+    @include tablet {
+        flex-direction: column;
+        padding-top: 88px;
+    }
     &__text {
         @include text ($ff, 500, 16px, 19px, $black);
         letter-spacing: 0.01em;

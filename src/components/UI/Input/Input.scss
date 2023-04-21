@@ -11,18 +11,23 @@
         margin-bottom: 20px;
         position: relative;
     }
+    svg {
+        position: absolute;
+        right: 14px;
+        top: 38px;
+    }
 
     &__title {
         @include text ($ff, 500, 14px, 20px, $secondary);
     }
 
     &__input {
-        border: 1px solid #D0D5DD;
-        border-radius: 8px;
-        outline: 0;
-        padding: 10px 14px;
-        cursor: pointer;
         @include text ($ff, 400, 16px, 24px, $secondary); 
+        border: 1px solid $input;
+        border-radius: 8px;
+        padding: 10px 14px;
+        outline: 0;
+        cursor: pointer;
         &::placeholder {
             @include text ($ff, 400, 16px, 24px, $accent);
         }

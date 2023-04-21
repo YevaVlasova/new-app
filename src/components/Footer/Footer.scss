@@ -1,11 +1,10 @@
-@import 'src/scss/_vars';
+@import 'src/scss/vars';
 @import 'src/scss/mixins';
 
 .copyright {
-    font-family: 'Inter';
+    @include text ($ff, 400, 16px, 20px, $accent);
     font-style: italic;
-    font-weight: 400;
-    font-size: 16px;
-    line-height: 20px;
-    color: #667085;
+    @include tablet {
+        display: none;
+    }
 }

@@ -1,4 +1,5 @@
 @import 'src/scss/_vars';
+@import 'src/scss/mixins';
 
 body {
     font-family: $ff;
@@ -22,7 +23,18 @@ body {
     background: #FCFDFF;
     display: grid;
     grid-template-columns: 640px auto;
-    padding: 32px 32px 32px 40px;
+    padding: 32px 32px 32px 0px;
+    gap: 32px;
+    @include desktop-small {
+        grid-template-columns: auto auto;
+        width: auto;
+    }
+    @include tablet {
+        grid-template-columns: 1fr;
+        height: 100%;
+        padding: 0 24px;
+        gap: 0;
+    }
 }
 
 .image {
@@ -30,6 +42,9 @@ body {
     height: 896px;
     background: $bg;
     border-radius: 40px;
+    @include tablet {
+        display: none;
+    }
     img {
         max-width: 100%;
         height: auto;
@@ -40,4 +55,8 @@ body {
 .container {
     display: grid;
     grid-template-rows: auto 1fr auto;
+    padding-left: 40px;
+    @include tablet {
+        padding-left: 0;
+    }
 }
