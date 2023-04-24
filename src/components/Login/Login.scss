@@ -47,7 +47,7 @@
         align-items: center;
         justify-content: space-between;
     }
-    a {
+    &__a {
         @include text ($ff, 500, 14px, 20px, $primary);
         text-decoration: none;
     }

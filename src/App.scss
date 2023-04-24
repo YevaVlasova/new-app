@@ -1,6 +1,10 @@
 @import 'src/scss/_vars';
 @import 'src/scss/mixins';
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     font-family: $ff;
     margin: 0;

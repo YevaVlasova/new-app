@@ -13,18 +13,18 @@ function Login() {
         <div className="login__desc">Please fill your detail to access your account.</div>
         <form action="get" className="form">
           <Input title="Email" placeholder="debra.holt@example.com" type="email" icon={<CloseIcon />} />
-          <Input title="Password" placeholder="••••••••" type="password" icon={<EyeIcon />} />   
+          <Input title="Password" placeholder="••••••••" type="password" icon={<EyeIcon />} />
           <div className="form__row">
             <Checkbox title="Remember me"/>
-            <a href="/">Forgot Password?</a> 
+            <a className="form__a" href="/">Forgot Password?</a> 
           </div>
-        </form>
+        </form> 
           <Button addClass="_primary" title="Sign in" type="submit"/>
           <Button linkTo="/" addClass="_secondary" title="Sign in with Google" icon={<GoogleIcon />}/>
        
         <div className="login__sign-up">
           Don’t have an account? 
-          <a href='/'> Sign up</a>
+          <a className="login__a" href='/'> Sign up</a>
         </div>
     </div>
   );
